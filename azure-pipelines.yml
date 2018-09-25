@@ -1,14 +1,37 @@
-# HTML
-# Archive your static HTML application and save it with the build record.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-pool:
-  vmImage: 'Ubuntu 16.04'
-
-steps:
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: false
-- task: PublishBuildArtifacts@1
+<html>
+	<head>
+	<title>Sample html</title>
+	</head>
+<body>	
+	<table id='tableidhere' border=1>
+	<tbody>	
+		<tr> 
+		<td>First Cell</td>
+		<td>Second Cell</td>
+		</tr>
+		<tr> 
+		<td>Third Cell</td>
+		<td>Fourth Cell</td>
+		</tr>
+		</tbody>
+	</table>
+	<br>
+	First name:<br>
+	<input type="text" name="firstname"><br>
+	Last name:<br>
+  <input type="text" name="lastname">
+  
+  <br>
+  <br>
+  <button id="btnClickme" onclick="window.location='file://D:/Selenium/Notes/samplehtml1.html'">Click Me</button>
+  <br>
+  <br>
+  <br>
+  <form action="file://D:/Selenium/Notes/samplehtml.html" method="get">
+  Choose your favorite subject:
+  <button name="subject" type="submit" value="HTML">HTML</button>
+  <button name="subject" type="submit" value="CSS">CSS</button>
+</form>
+	
+</body>
+</html>
